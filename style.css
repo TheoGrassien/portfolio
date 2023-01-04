@@ -38,6 +38,7 @@ button {
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -527,6 +528,7 @@ main.active {
 .gallery-sticky {
   position: sticky;
   top: 130px;
+  overflow-x: hidden;
 }
 
 .gallery {
@@ -615,7 +617,7 @@ main.active {
 }
 
 .work-card:hover {
-  padding: var(--padding) 72px;
+  padding: 104px 72px;
 }
 
 .work-card:hover h3,
@@ -1196,7 +1198,17 @@ footer a {
   }
   .work-grid {
     grid-template-columns: revert;
+    /* grid-template-columns: repeat(auto-fit, minmax(385px, 1fr)); */
+    /* grid-template-rows: repeat(auto-fit, minmax(385px, 1fr)); */
     row-gap: 32px;
+  }
+
+  .work-card {
+    height: 315px;
+    padding: 48px;
+  }
+  .work-card:hover {
+    padding: 104px 48px;
   }
   .work-info-card img {
     height: 190px;
