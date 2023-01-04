@@ -1,5 +1,4 @@
 // Cursor and buttons
-
 let cursor = document.querySelector("#cursor");
 let btnHover = false;
 let scrolling = false;
@@ -30,12 +29,10 @@ if (safariAgent) {
 }
 
 document.addEventListener("mousemove", (e) => placeCursor(e));
-// document.addEventListener("scroll", () => (scrolling = true));
 
 let btns = document.querySelectorAll(".btn, .work-card, .social");
 btns.forEach((btn) => {
   btn.addEventListener("mousemove", (e) => {
-    // console.log(btn.getBoundingClientRect().top.);
     let x = e.clientX - btn.getBoundingClientRect().left;
     let y = e.clientY - btn.getBoundingClientRect().top;
     btn.style.setProperty("--x", x + "px");
@@ -60,7 +57,6 @@ function touchDevice() {
 }
 
 // Responsive NavBar
-
 let burgerButton = document.querySelector("header button");
 let burgerIcon = document.querySelector("header .burger-icon");
 let navBar = document.querySelector("header nav");
@@ -79,7 +75,6 @@ function switchNavBar() {
 navBarLinks.forEach((link) => {
   link.addEventListener("click", () => {
     if (navBar.classList.contains("active")) {
-      console.log("click");
       switchNavBar();
     }
   });
@@ -88,7 +83,6 @@ navBarLinks.forEach((link) => {
 burgerButton.addEventListener("click", switchNavBar);
 
 // NavBar animation
-
 const body = document.body;
 let lastScroll = 0;
 
@@ -122,3 +116,15 @@ const observer = new IntersectionObserver((entries) => {
 
 const hiddenElements = document.querySelectorAll(".animation-hidden");
 hiddenElements.forEach((el) => observer.observe(el));
+
+// Pre-loader
+let html = document.querySelector("html");
+let loaderContainer = document.querySelector(".loader-container");
+
+addEventListener("load", () => {
+  html.classList.remove("loading");
+  loaderContainer.classList.add("out");
+  setTimeout(() => {
+    loaderContainer.classList.add("hidden");
+  }, 800);
+});

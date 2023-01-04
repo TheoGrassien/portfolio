@@ -996,6 +996,62 @@ footer a {
   transform: translateY(0%);
 }
 
+/* Loader */
+html.loading {
+  overflow: hidden;
+}
+
+.loader-container {
+  display: flex;
+  background-color: black;
+  position: absolute;
+  z-index: 2;
+  width: 100vw;
+  height: 100vh;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.loader-container.out {
+  animation: loader-out 0.8s;
+}
+
+.loader-container.hidden {
+  display: none;
+}
+
+@keyframes loader-out {
+  from {
+    transform: translateY(0%);
+    display: flex;
+  }
+  to {
+    transform: translateY(-100%);
+    display: none;
+  }
+}
+
+#loader {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: inline-block;
+  border-top: 3px solid #fff;
+  border-right: 3px solid transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 /* Media queries */
 
 @media screen and (min-width: 1600px) {
