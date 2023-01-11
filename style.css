@@ -554,26 +554,27 @@ main.active {
 }
 
 .gallery-container {
-  width: min-content;
-}
-
-.gallery-sticky {
-  position: sticky;
-  top: 130px;
-  overflow-x: hidden;
-  width: min-content;
-}
-
-.gallery-sticky.touch {
-  position: revert;
-  overflow-x: auto;
+  width: 100vw;
+  padding-top: 100px;
 }
 
 .gallery {
+  /* position: sticky;
+  top: 130px; */
+  /* top: 0; */
+  /* overflow-x: hidden;
+  width: 100vw; */
   display: flex;
   gap: 48px;
-  width: min-content;
+  /* max-width: min-content !important; */
+  overflow-x: hidden;
 }
+
+/* .gallery-sticky.touch {
+  position: revert;
+  overflow-x: auto;
+  width: 100vw;
+} */
 
 .gallery img {
   height: 400px;
