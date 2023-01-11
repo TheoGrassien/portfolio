@@ -58,10 +58,10 @@ window.addEventListener("scroll", () => {
 });
 
 // Sticky gallery horizontal scroll effects
-let gallery = document.querySelector(".gallery");
-let galleryContainer = document.querySelector(".gallery-container");
-let gallerySticky = document.querySelector(".gallery-sticky");
-let lastImage = document.querySelector(".gallery img:last-of-type");
+// let gallery = document.querySelector(".gallery");
+// let galleryContainer = document.querySelector(".gallery-container");
+// let gallerySticky = document.querySelector(".gallery-sticky");
+// let lastImage = document.querySelector(".gallery img:last-of-type");
 
 // function stickyGallery() {
 //   window.addEventListener("load", () => {
@@ -189,7 +189,7 @@ gsap.to(sections, {
 
     pin: true,
     scrub: true,
-    markers: true,
+    // markers: true,
 
     // snap: directionalSnap(1 / (sections.length - 1)),
     end: `+=${gallery.scrollWidth}`,
