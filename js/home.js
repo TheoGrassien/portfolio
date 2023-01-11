@@ -179,6 +179,7 @@ window.addEventListener("scroll", () => {
 
 gsap.registerPlugin(ScrollTrigger);
 let sections = gsap.utils.toArray(".gallery img");
+let gallery = document.querySelector(".gallery");
 
 gsap.to(sections, {
   xPercent: -100 * (sections.length - 1),
