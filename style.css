@@ -554,13 +554,20 @@ main.active {
 }
 
 .gallery-container {
-  padding: 100px 0;
+  padding-top: 100px;
+  width: min-content;
 }
 
 .gallery-sticky {
   position: sticky;
   top: 130px;
   overflow-x: hidden;
+  width: min-content;
+}
+
+.gallery-sticky.touch {
+  position: revert;
+  overflow-x: auto;
 }
 
 .gallery {
@@ -576,6 +583,10 @@ main.active {
 .about-text {
   margin: 64px var(--padding) 64px 20vw;
   max-width: 800px;
+}
+
+.about-text-wrapper {
+  margin-top: 100px !important;
 }
 
 /* Travaux section */
@@ -687,7 +698,8 @@ main.active {
 footer {
   background-color: black;
   margin-top: 156px;
-  padding: 80px 0;
+  padding-top: 80px;
+  padding-bottom: 100px;
 }
 
 footer .wrapper {

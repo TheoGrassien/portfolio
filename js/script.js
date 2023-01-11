@@ -17,6 +17,7 @@ function placeCursor(e) {
   }
 }
 
+// Hide custom cursor when is touch device
 if (touchDevice()) {
   cursor.style.display = "none";
 }
@@ -46,7 +47,7 @@ btns.forEach((btn) => {
   });
 });
 
-// Hide cursor when is touch device
+// Detect touch device
 function touchDevice() {
   try {
     document.createEvent("TouchEvent");

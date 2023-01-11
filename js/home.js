@@ -45,32 +45,6 @@ function setPosition() {
 window.addEventListener("load", setPosition);
 window.addEventListener("resize", setPosition);
 
-// Sticky gallery horizontal scroll effects
-window.addEventListener("load", () => {
-  let gallery = document.querySelector(".gallery");
-  let galleryContainer = document.querySelector(".gallery-container");
-  let gallerySticky = document.querySelector(".gallery-sticky");
-  let lastImage = document.querySelector(".gallery img:last-of-type");
-
-  let initialGalleryTopDist;
-  let scrollDistance;
-  let galleryWidth = gallery.scrollWidth;
-  let windowWidth = window.innerWidth;
-
-  initialGalleryTopDist = galleryContainer.getBoundingClientRect().top;
-  scrollDistance = initialGalleryTopDist + galleryWidth - windowWidth;
-  galleryContainer.style.height = galleryWidth + "px";
-
-  window.addEventListener("scroll", function () {
-    var scrollTop = window.scrollY;
-
-    if (scrollTop >= initialGalleryTopDist && scrollTop <= scrollDistance) {
-      gallery.style.transform =
-        "translateX(-" + (scrollTop - initialGalleryTopDist) + "px)";
-    }
-  });
-});
-
 // Color header
 let pageTopDist = setPosition();
 
@@ -81,3 +55,38 @@ window.addEventListener("scroll", () => {
     header.classList.add("dark-header");
   }
 });
+
+// Sticky gallery horizontal scroll effects
+let gallery = document.querySelector(".gallery");
+let galleryContainer = document.querySelector(".gallery-container");
+let gallerySticky = document.querySelector(".gallery-sticky");
+let lastImage = document.querySelector(".gallery img:last-of-type");
+
+function stickyGallery() {
+  window.addEventListener("load", () => {
+    let initialGalleryTopDist;
+    let scrollDistance;
+    let galleryWidth = gallery.scrollWidth;
+    let windowWidth = window.innerWidth;
+
+    initialGalleryTopDist = galleryContainer.getBoundingClientRect().top;
+    scrollDistance = initialGalleryTopDist + galleryWidth - windowWidth;
+    galleryContainer.style.height = galleryWidth + "px";
+
+    window.addEventListener("scroll", function () {
+      var scrollTop = window.scrollY;
+
+      if (scrollTop >= initialGalleryTopDist && scrollTop <= scrollDistance) {
+        gallery.style.transform =
+          "translateX(-" + (scrollTop - initialGalleryTopDist) + "px)";
+      }
+    });
+  });
+}
+
+// Switch gallery to horizontal scroll when is touch device
+if (touchDevice()) {
+  gallerySticky.classList.add("touch");
+} else {
+  stickyGallery();
+}
