@@ -509,7 +509,6 @@ main.active {
 
 .landing {
   margin-top: 150px;
-  /* position: fixed; */
   position: absolute;
   color: white;
   width: 100vw;

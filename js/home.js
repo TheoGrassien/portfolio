@@ -94,6 +94,10 @@ if (touchDevice()) {
 }
 
 // Parrallax effect
-window.addEventListener("scroll", () => {
-  landing.style.top = window.scrollY * 0.7 + "px";
-});
+if (touchDevice()) {
+  landing.style.position = "fixed";
+} else {
+  window.addEventListener("scroll", () => {
+    landing.style.top = window.scrollY * 0.7 + "px";
+  });
+}
