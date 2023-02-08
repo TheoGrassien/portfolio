@@ -862,14 +862,24 @@ footer a {
   background-size: contain !important;
   background: linear-gradient(
       135deg,
-      rgba(66, 146, 252, 0.5) 0%,
-      rgba(19, 68, 141, 0.5) 100%
+      rgba(255, 101, 58, 0.57) 0%,
+      rgba(15, 94, 249, 0.57) 100%
     ),
     url(img/works/drive/drive-landing.jpg);
 }
 .hero.national-gallery {
   background-size: contain !important;
   background: url(img/works/national-gallery/national-gallery-background.jpg);
+}
+
+.hero.allodegorgement {
+  background-size: contain !important;
+  background: linear-gradient(
+      135deg,
+      rgba(66, 146, 252, 0.5) 0%,
+      rgba(19, 68, 141, 0.5) 100%
+    ),
+    url(img/works/allodegorgement/allodegorgement-screen-1.jpg);
 }
 
 .hero .hero-blur {
@@ -995,6 +1005,11 @@ footer a {
   margin-bottom: -1px;
   display: block;
 }
+
+.allodegorgement-screenshots img {
+  box-shadow: 0px 0px 86px rgba(6, 15, 48, 0.1);
+}
+
 .mobile-type .screenshots {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
