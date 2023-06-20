@@ -10,9 +10,9 @@
 /* Fonts */
 
 @font-face {
-  font-family: "Big Caslon FB";
-  src: url("fonts/BigCaslonFB-BlackItalic.woff2") format("woff2"),
-    url("fonts/BigCaslonFB-BlackItalic.woff") format("woff");
+  font-family: 'Big Caslon FB';
+  src: url('fonts/BigCaslonFB-BlackItalic.woff2') format('woff2'),
+    url('fonts/BigCaslonFB-BlackItalic.woff') format('woff');
   font-weight: 900;
   font-style: italic;
 }
@@ -64,7 +64,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   background-color: black;
 }
@@ -104,7 +104,7 @@ p {
 }
 
 #cursor::after {
-  content: "";
+  content: '';
   position: absolute;
   inset: -2px;
   background: var(--primary-color);
@@ -176,7 +176,7 @@ nav a {
 }
 
 nav a::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -259,7 +259,7 @@ nav.active {
 }
 .burger-icon::before,
 .burger-icon::after {
-  content: "";
+  content: '';
   width: 32px;
   height: 2px;
   background: var(--dark);
@@ -342,7 +342,7 @@ header button:hover .burger-icon.active::after {
 
 .btn::before {
   --size: 0;
-  content: "";
+  content: '';
   position: absolute;
   left: var(--x);
   top: var(--y);
@@ -399,7 +399,7 @@ header button:hover .burger-icon.active::after {
 }
 
 .cv-btn span::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -467,7 +467,7 @@ main.active {
 }
 
 .headline-switcher span {
-  font-family: "Big Caslon FB", serif;
+  font-family: 'Big Caslon FB', serif;
   font-weight: 900;
   font-style: italic;
   font-size: 8vw;
@@ -636,7 +636,7 @@ main.active {
 
 .work-card::before {
   --size: 0;
-  content: "";
+  content: '';
   position: absolute;
   left: var(--x);
   top: var(--y);
@@ -709,7 +709,7 @@ footer a {
 }
 
 .mail::after {
-  content: "";
+  content: '';
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -787,7 +787,7 @@ footer a {
 }
 
 .social::before {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   top: 0;
@@ -880,6 +880,16 @@ footer a {
       rgba(19, 68, 141, 0.5) 100%
     ),
     url(img/works/allodegorgement/allodegorgement-screen-1.jpg);
+}
+
+.hero.dayofimpressions {
+  background-size: contain !important;
+  background: linear-gradient(
+      135deg,
+      rgba(95, 193, 221, 0.5) 0%,
+      rgba(29, 131, 159, 0.5) 100%
+    ),
+    url(img/works/dayofimpressions/dayofimpressions-screen-1.jpg);
 }
 
 .hero .hero-blur {
@@ -999,15 +1009,12 @@ footer a {
 .screenshots img {
   width: 100%;
   margin-bottom: 80px;
+  box-shadow: 0px 0px 86px rgba(6, 15, 48, 0.1);
 }
 
 .screenshots.drive-screenshots img {
   margin-bottom: -1px;
   display: block;
-}
-
-.allodegorgement-screenshots img {
-  box-shadow: 0px 0px 86px rgba(6, 15, 48, 0.1);
 }
 
 .mobile-type .screenshots {
@@ -1106,6 +1113,10 @@ html.loading {
   .work-info-card {
     position: relative;
     margin: 0 auto;
+  }
+
+  .work-content {
+    top: -100px;
   }
 
   .work-card:nth-of-type(even) {
@@ -1208,6 +1219,22 @@ html.loading {
     margin: 64px var(--padding) 64px var(--padding);
   }
 }
+
+@media screen and (max-width: 980px) {
+  .work-actions.dayofimpressions-actions {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .work-actions.dayofimpressions-actions .btn {
+    width: 100%;
+  }
+
+  .work-actions.dayofimpressions-actions .btn:hover::before {
+    --size: 1050px;
+  }
+}
+
 @media screen and (max-width: 900px) {
   .social-links {
     flex-direction: column;
