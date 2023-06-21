@@ -88,7 +88,8 @@ h1 {
   margin: 0;
 }
 
-p {
+p,
+.body {
   color: var(--dark);
   font-size: 1.5rem;
 }
@@ -682,6 +683,71 @@ main.active {
   filter: drop-shadow(0px 0px 50px rgba(4, 8, 24, 0.1));
 }
 
+/* Awards section */
+.awards {
+  margin: 0 var(--padding);
+}
+
+.award {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.award-title-container {
+  width: 100%;
+}
+
+.award-title {
+  color: var(--dark);
+  font-size: 1.5rem;
+  font-weight: 400;
+  width: fit-content;
+  position: relative;
+}
+
+.award-title::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: var(--primary-color);
+  transform-origin: bottom right;
+  transition: transform 0.3s ease-in;
+}
+
+.award:hover .award-title {
+  transition: all 0.2s ease;
+  background-image: var(--primary-color);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+}
+
+.award:hover .award-title::after {
+  transition: transform 0.3s ease-out;
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.award-icon,
+.award-icon path {
+  transition: 0.3s ease;
+}
+
+.award:hover .award-icon {
+  transform: rotate(-45deg);
+}
+
+.award:hover .award-icon path {
+  fill: url(#primary-color);
+}
+
 /* Footer */
 
 footer {
@@ -1243,8 +1309,16 @@ html.loading {
   .headline-switcher {
     width: 315px;
   }
+
+  .award-icon {
+    display: none;
+  }
+  .award-title {
+    font-size: 1.25rem;
+  }
 }
-@media screen and (max-width: 730px) {
+
+@media screen and (max-width: 750px) {
   :root {
     --padding: 72px;
   }
@@ -1256,6 +1330,25 @@ html.loading {
   }
   .headline-switcher span {
     font-size: 3.5rem;
+  }
+  p {
+    font-size: 1rem;
+  }
+  .about-text {
+    margin: 32px var(--padding) 32px var(--padding);
+  }
+  .work-card-title {
+    font-size: 1.5rem;
+  }
+  .award {
+    gap: 16px;
+  }
+  .award-image {
+    width: 40px;
+    height: 40px;
+  }
+  .award-title {
+    font-size: 1rem;
   }
   .landing-cta {
     flex-direction: column;
