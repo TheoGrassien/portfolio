@@ -7,16 +7,6 @@
   --padding: 104px;
 }
 
-/* Fonts */
-
-@font-face {
-  font-family: 'Big Caslon FB';
-  src: url('fonts/BigCaslonFB-BlackItalic.woff2') format('woff2'),
-    url('fonts/BigCaslonFB-BlackItalic.woff') format('woff');
-  font-weight: 900;
-  font-style: italic;
-}
-
 /* Reset */
 *,
 *::before,
@@ -468,10 +458,11 @@ main.active {
 }
 
 .headline-switcher span {
-  font-family: 'Big Caslon FB', serif;
+  font-family: 'Libre Caslon Text', serif;
   font-weight: 900;
   font-style: italic;
-  font-size: 8vw;
+  font-size: 7vw;
+  letter-spacing: 2px;
   background-image: var(--primary-color);
   background-clip: text;
   -webkit-background-clip: text;
