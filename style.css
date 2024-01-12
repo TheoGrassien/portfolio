@@ -1166,7 +1166,7 @@ html.loading {
 
 /* Media queries */
 
-@media screen and (min-width: 1600px) {
+@media screen and (min-width: 1490px) {
   .work-info-card {
     position: relative;
     margin: 0 auto;
@@ -1185,6 +1185,7 @@ html.loading {
     top: 56px;
   }
 }
+
 @media screen and (min-width: 1041px) {
   .btn-l:hover::before {
     --size: 1350px;
