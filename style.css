@@ -939,6 +939,16 @@ footer a {
     url(img/works/allodegorgement/allodegorgement-screen-1.jpg);
 }
 
+.hero.renova9 {
+  background-size: contain !important;
+  background: linear-gradient(
+      135deg,
+      rgb(204, 33, 33, 0.5) 0%,
+      rgba(178, 0, 0, 0.5) 100%
+    ),
+    url(img/works/renova9/renova9-screen-1.jpg);
+}
+
 .hero.dayofimpressions {
   background-size: contain !important;
   background: linear-gradient(
