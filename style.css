@@ -674,6 +674,47 @@ main.active {
   filter: drop-shadow(0px 0px 50px rgba(4, 8, 24, 0.1));
 }
 
+/* Testimonial section */
+.testimonial {
+  padding: 80px 48px;
+  border-radius: 24px;
+  background-color: #f6f8fa;
+  margin-top: 250px;
+  margin-inline: var(--padding);
+}
+
+.testimonial-logo {
+  display: block;
+  margin: auto;
+}
+
+.testimonial p {
+  text-align: center;
+}
+
+.testimonial-content {
+  margin-block: 3rem;
+  margin-inline: auto;
+  max-width: 1200px;
+}
+
+.testimonial-author-picture {
+  border-radius: 50%;
+  display: block;
+  margin: 16px auto;
+}
+
+.testimonial-author {
+  margin: 0;
+  font-size: 1.25rem;
+}
+
+.testimonial-author-profession {
+  margin: 0;
+  color: var(--grey);
+  font-size: 1rem;
+}
+
 /* Awards section */
 .awards {
   margin: 0 var(--padding);
@@ -695,6 +736,12 @@ main.active {
   font-weight: 400;
   width: fit-content;
   position: relative;
+}
+
+.award-description {
+  color: var(--grey);
+  font-size: 1.25rem;
+  margin-block: 1rem;
 }
 
 .award-title::after {
@@ -1342,6 +1389,34 @@ html.loading {
   .work-card-title {
     font-size: 1.5rem;
   }
+  .award-description {
+    font-size: 1rem;
+  }
+
+  .testimonial p {
+    text-align: revert;
+  }
+
+  .testimonial-author,
+  .testimonial-author-profession {
+    font-size: 1rem;
+  }
+
+  .testimonial-logo {
+    height: 24px;
+    margin: revert;
+  }
+
+  .testimonial-content {
+    margin-inline: revert;
+  }
+
+  .testimonial-author-picture {
+    width: 48px;
+    height: 48px;
+    margin: 16px 0;
+  }
+
   .award {
     gap: 16px;
   }
@@ -1471,5 +1546,10 @@ html.loading {
   .mobile-type .work-info-card img {
     height: 400px;
     top: -430px;
+  }
+
+  .testimonial {
+    padding: 56px 24px;
+    margin-top: 150px;
   }
 }
