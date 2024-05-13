@@ -678,7 +678,7 @@ main.active {
 .testimonial {
   padding: 80px 48px;
   border-radius: 24px;
-  background-color: #f6f8fa;
+  background-color: #f8f8f9;
   margin-top: 250px;
   margin-inline: var(--padding);
 }
