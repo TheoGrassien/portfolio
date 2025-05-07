@@ -996,6 +996,16 @@ footer a {
     url(img/works/renova9/renova9-screen-1.jpg);
 }
 
+.hero.deplano {
+  background-size: contain !important;
+  background: linear-gradient(
+      135deg,
+      rgb(47, 202, 145, 0.5) 0%,
+      rgba(12, 101, 68, 0.5) 100%
+    ),
+    url(img/works/deplano/deplano-screen-0.jpg);
+}
+
 .hero.dayofimpressions {
   background-size: contain !important;
   background: linear-gradient(
