@@ -1006,6 +1006,16 @@ footer a {
     url(img/works/deplano/deplano-screen-0.jpg);
 }
 
+.hero.aspf {
+  background-size: contain !important;
+  background: linear-gradient(
+      135deg,
+      rgb(31, 78, 173, 0.5) 0%,
+      rgba(13, 33, 72, 0.5) 100%
+    ),
+    url(img/works/aspf/aspf-screen-1.png);
+}
+
 .hero.dayofimpressions {
   background-size: contain !important;
   background: linear-gradient(
